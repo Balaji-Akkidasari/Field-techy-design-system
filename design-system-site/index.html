@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Field Techy® — Design System</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<header class="masthead" id="masthead">
+  <div class="mh-left">
+    <img class="mh-logo" src="assets/logo.png" alt="Field Techy" />
+    <span class="mh-tag mono">Design&nbsp;System&nbsp;v2.0</span>
+  </div>
+  <nav class="mh-nav mono" id="mhNav">
+    <a href="#principles">Principles</a>
+    <a href="#colors">Foundations</a>
+    <a href="#buttons">Components</a>
+    <a href="#screens">Screens</a>
+    <a href="#tokens">Tokens</a>
+  </nav>
+  <div class="mh-right mono">
+    <button class="mh-link" id="copyAll">Copy CSS vars</button>
+    <a class="mh-link" href="https://www.figma.com/design/YT6JQ3g2DEVDF5Es5a0j3N/Field-Techy---Design-v2.0?node-id=1279-34079" target="_blank" rel="noopener">Figma&nbsp;&#8599;</a>
+  </div>
+  <button class="mh-burger" id="mhToggle" aria-label="Menu"><span></span><span></span></button>
+</header>
+
+<main>
+
+  <!-- ============ 01 · OVERVIEW ============ -->
+  <section class="hero" id="overview">
+    <div class="hero-kicker mono">( Field&nbsp;Techy &mdash; Mobile App&nbsp;&middot;&nbsp;Design Guidelines&nbsp;&middot;&nbsp;Developer&nbsp;Handoff )</div>
+    <h1 class="hero-title">
+      <span class="hero-line">Field</span>
+      <span class="hero-line hero-line-em">Techy<em class="serif">&nbsp;&mdash; design system</em></span>
+    </h1>
+    <div class="hero-meta mono">
+      <span>(01) Canvas&nbsp;&nbsp;390&nbsp;pt</span>
+      <span>(02) Type&nbsp;&nbsp;Poppins</span>
+      <span>(03) Brand&nbsp;&nbsp;#009966</span>
+      <span>(04) Version&nbsp;&nbsp;2.0</span>
+      <span>(05) Roles&nbsp;&nbsp;Client&nbsp;/&nbsp;Engineer</span>
+    </div>
+    <p class="hero-lead">
+      The single source of truth for building the Field&nbsp;Techy app &mdash; color, type, components
+      and patterns, extracted from the Figma file and prepared for development.
+      <em class="serif">Click anything to copy.</em>
+    </p>
+    <div class="splash-anim">
+      <div class="sa-stage" id="saStage" title="Login animation v1.0 — hover to pause">
+        <img class="sa-frame on" src="assets/animation/anim-1.svg" alt="Login animation — state 1" />
+        <img class="sa-frame" src="assets/animation/anim-2.svg" alt="Login animation — state 2" />
+        <img class="sa-frame" src="assets/animation/anim-3.svg" alt="Login animation — state 3" />
+        <img class="sa-frame" src="assets/animation/anim-4.svg" alt="Login animation — state 4" />
+        <img class="sa-frame" src="assets/animation/anim-5.svg" alt="Login animation — state 5" />
+        <img class="sa-frame" src="assets/animation/anim-6.svg" alt="Login animation — state 6" />
+        <img class="sa-frame" src="assets/animation/anim-7.svg" alt="Login animation — state 7" />
+        <div class="sa-progress" id="saProgress"></div>
+      </div>
+      <div class="sa-bar">
+        <span>Login animation v1.0 &middot; 7 states &middot; ambient float</span>
+        <span class="sa-frame-id" id="saFrame">01 / 07</span>
+      </div>
+    </div>
+    <div class="hero-strip" id="heroStrip" aria-label="Key screens"></div>
+  </section>
+
+  <!-- ============ 02 · PRINCIPLES ============ -->
+  <section class="sec" id="principles">
+    <div class="sec-head">
+      <span class="sec-num mono">(02)</span>
+      <h2 class="sec-title">Principles</h2>
+      <span class="sec-tag mono">Design documentation hub</span>
+    </div>
+    <p class="sec-lead">Nine principles guide every Field Techy decision.</p>
+    <ol class="principles-list" id="principles-root"></ol>
+  </section>
+
+  <!-- ============ 03 · COLORS ============ -->
+  <section class="sec" id="colors">
+    <div class="sec-head">
+      <span class="sec-num mono">(03)</span>
+      <h2 class="sec-title">Colors</h2>
+      <span class="sec-tag mono">Foundations</span>
+    </div>
+    <p class="sec-lead">Eight ramps from the Figma <i>Colors system</i>. Click any swatch to copy its hex.</p>
+    <div id="palette-root" class="palettes"></div>
+
+    <h3 class="sub-title"><span class="mono">03.1</span> Semantic tokens <span class="serif">&mdash; use these in code</span></h3>
+    <div id="semantic-root" class="token-rows"></div>
+
+    <h3 class="sub-title"><span class="mono">03.2</span> Gradients</h3>
+    <div id="gradient-root" class="gradients"></div>
+  </section>
+
+  <!-- ============ 04 · TYPOGRAPHY ============ -->
+  <section class="sec" id="typography">
+    <div class="sec-head">
+      <span class="sec-num mono">(04)</span>
+      <h2 class="sec-title">Typography</h2>
+      <span class="sec-tag mono">Foundations</span>
+    </div>
+    <p class="sec-lead">Poppins is the primary family (400&ndash;900). Line height is <b>1.5&times;</b> font size. Inter for chat &amp; calendar, Rubik for large wallet figures. Click a row to copy its type spec.</p>
+    <div id="type-root" class="type-scale"></div>
+  </section>
+
+  <!-- ============ 05 · SPACING ============ -->
+  <section class="sec" id="spacing">
+    <div class="sec-head">
+      <span class="sec-num mono">(05)</span>
+      <h2 class="sec-title">Spacing</h2>
+      <span class="sec-tag mono">Foundations</span>
+    </div>
+    <p class="sec-lead">4&nbsp;pt base unit. Screen gutters 16&ndash;24&nbsp;pt; card padding 16&ndash;24&nbsp;pt.</p>
+    <div id="spacing-root" class="spacings"></div>
+  </section>
+
+  <!-- ============ 06 · RADIUS ============ -->
+  <section class="sec" id="radius">
+    <div class="sec-head">
+      <span class="sec-num mono">(06)</span>
+      <h2 class="sec-title">Corner&nbsp;radius</h2>
+      <span class="sec-tag mono">Foundations</span>
+    </div>
+    <div id="radius-root" class="radii"></div>
+  </section>
+
+  <!-- ============ 07 · ELEVATION ============ -->
+  <section class="sec" id="elevation">
+    <div class="sec-head">
+      <span class="sec-num mono">(07)</span>
+      <h2 class="sec-title">Elevation</h2>
+      <span class="sec-tag mono">Foundations</span>
+    </div>
+    <div id="shadow-root" class="shadows"></div>
+  </section>
+
+  <!-- ============ 08 · ICONOGRAPHY ============ -->
+  <section class="sec" id="iconography">
+    <div class="sec-head">
+      <span class="sec-num mono">(08)</span>
+      <h2 class="sec-title">Iconography</h2>
+      <span class="sec-tag mono">Foundations</span>
+    </div>
+    <p class="sec-lead">Vuesax / Linear set. Sizes 16 / 20 / 24&nbsp;pt; color inherits text color.</p>
+    <div id="icons-root" class="icons"></div>
+  </section>
+
+  <!-- ============ 09 · COMPONENTS INDEX ============ -->
+  <section class="sec" id="components">
+    <div class="sec-head">
+      <span class="sec-num mono">(09)</span>
+      <h2 class="sec-title">Components</h2>
+      <span class="sec-tag mono">Index</span>
+    </div>
+    <p class="sec-lead">Rendered from the design tokens and component geometry. Each block pairs the component with its defining screen.</p>
+    <ol class="comp-index mono">
+      <li><a href="#buttons">(10) Buttons</a></li>
+      <li><a href="#inputs">(11) Inputs &amp; forms</a></li>
+      <li><a href="#cards">(12) Cards</a></li>
+      <li><a href="#wallet">(13) Wallet &amp; banners</a></li>
+      <li><a href="#navigation">(14) Navigation &amp; headers</a></li>
+      <li><a href="#chips">(15) Chips &amp; status</a></li>
+      <li><a href="#feedback">(16) Dialogs &amp; feedback</a></li>
+      <li><a href="#chat">(17) Chat</a></li>
+      <li><a href="#timeline">(18) Job timeline</a></li>
+    </ol>
+  </section>
+
+  <!-- ============ 10 · BUTTONS ============ -->
+  <section class="sec" id="buttons">
+    <div class="sec-head">
+      <span class="sec-num mono">(10)</span>
+      <h2 class="sec-title">Buttons</h2>
+      <span class="sec-tag mono">Components</span>
+    </div>
+    <div class="comp-row">
+      <div class="preview">
+        <button class="ds-btn ds-btn-primary">Sign in &rarr;</button>
+        <button class="ds-btn ds-btn-primary" disabled>Sign in &rarr;</button>
+        <button class="ds-btn ds-btn-dark">Add Balance</button>
+        <button class="ds-btn ds-btn-outline">Directions</button>
+        <div class="pair">
+          <button class="ds-btn ds-btn-approve">Approve</button>
+          <button class="ds-btn ds-btn-reject">Reject</button>
+        </div>
+        <button class="ds-btn ds-btn-info">Check In &check;</button>
+        <div class="social-row">
+          <button class="ds-btn ds-btn-social">G&nbsp; Continue with Google</button>
+          <button class="ds-btn ds-btn-social">A&nbsp; Continue with Apple</button>
+        </div>
+      </div>
+      <div class="spec">
+        <p><b>Primary</b> &mdash; bg <code>#009966</code>, radius <code>50</code>, h <code>47</code>, Poppins SemiBold 15/22.5 white. Hover <code>#00875A</code> &middot; pressed <code>#007750</code>.</p>
+        <p><b>Dark</b> &mdash; bg <code>#007750</code>, stroke <code>#30DDA4</code>, h <code>48</code>.</p>
+        <p><b>Outline</b> &mdash; radius <code>8</code>, stroke <code>#009966</code>, h <code>48</code>.</p>
+        <p><b>Approve</b> <code>#2E9A1D</code> / <b>Reject</b> <code>#D95741</code> &mdash; radius <code>6</code>, 148&times;40.</p>
+        <p><b>Check-in</b> &mdash; bg <code>#4794E7</code>, radius <code>8</code>. <b>Social</b> &mdash; bg <code>#F2F2F2</code>, 48h.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 11 · INPUTS ============ -->
+  <section class="sec" id="inputs">
+    <div class="sec-head">
+      <span class="sec-num mono">(11)</span>
+      <h2 class="sec-title">Inputs&nbsp;&amp;&nbsp;forms</h2>
+      <span class="sec-tag mono">Components</span>
+    </div>
+    <div class="comp-row">
+      <div class="preview">
+        <div class="field">
+          <label class="field-label">Email ID <span class="req">*</span></label>
+          <input class="ds-input" type="email" placeholder="Enter here" />
+        </div>
+        <div class="field">
+          <label class="field-label">Mobile number <span class="req">*</span></label>
+          <div class="ds-input-group">
+            <button class="ds-dropdown" id="countryDropdown" type="button" aria-haspopup="listbox" aria-expanded="false">
+              <span class="dd-value">+91</span>
+              <span class="dd-caret" aria-hidden="true"></span>
+            </button>
+            <input class="ds-input ds-input-grow" type="tel" placeholder="98765 43210" />
+          </div>
+          <ul class="dd-menu" id="countryMenu" role="listbox" hidden>
+            <li role="option" data-value="+91"><span>India</span><span class="dd-code">+91</span></li>
+            <li role="option" data-value="+1"><span>United States</span><span class="dd-code">+1</span></li>
+            <li role="option" data-value="+44"><span>United Kingdom</span><span class="dd-code">+44</span></li>
+            <li role="option" data-value="+971"><span>UAE</span><span class="dd-code">+971</span></li>
+            <li role="option" data-value="+65"><span>Singapore</span><span class="dd-code">+65</span></li>
+          </ul>
+        </div>
+        <div class="field">
+          <label class="field-label">City / Location</label>
+          <button class="ds-dropdown ds-dropdown-full" id="cityDropdown" type="button" aria-haspopup="listbox" aria-expanded="false">
+            <span class="dd-value">Select city</span>
+            <span class="dd-caret" aria-hidden="true"></span>
+          </button>
+          <ul class="dd-menu dd-menu-full" id="cityMenu" role="listbox" hidden>
+            <li role="option" data-value="Chennai">Chennai</li>
+            <li role="option" data-value="Mumbai">Mumbai</li>
+            <li role="option" data-value="Delhi">Delhi</li>
+            <li role="option" data-value="Bengaluru">Bengaluru</li>
+            <li role="option" data-value="Hyderabad">Hyderabad</li>
+          </ul>
+        </div>
+        <div class="field">
+          <label class="field-label">Remarks</label>
+          <textarea class="ds-input ds-input-area" placeholder="Enter Remarks"></textarea>
+        </div>
+      </div>
+      <figure class="shot">
+        <img src="assets/screens/country-dropdown.png" alt="Country dropdown" loading="lazy" />
+        <figcaption class="mono">(01) Client Sign In &mdash; field anatomy</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ 12 · CARDS ============ -->
+  <section class="sec" id="cards">
+    <div class="sec-head">
+      <span class="sec-num mono">(12)</span>
+      <h2 class="sec-title">Cards</h2>
+      <span class="sec-tag mono">Components</span>
+    </div>
+    <div class="comp-row">
+      <div class="preview preview-stack">
+        <div class="demo-card">
+          <div class="demo-card-head"><span class="chip chip-green">Waiting for Assign</span><span class="amount">$330</span></div>
+          <h4 class="demo-card-title">Laptop Deployment &amp; Setup</h4>
+          <p class="demo-card-meta">105, Anna Salai, Little Mount, Guindy, Chennai</p>
+          <p class="demo-card-meta">Today &middot; 11:00 AM &mdash; 01:00 PM</p>
+          <div class="demo-tags"><span class="tag">EUC</span><span class="tag tag-blue">Onsite</span></div>
+        </div>
+        <div class="demo-card demo-card-tracking">
+          <div class="demo-card-head"><span class="chip chip-blue">In progress</span><span class="muted small">#FT-2026-04-1247</span></div>
+          <h4 class="demo-card-title">Router Configuration</h4>
+          <div class="trackline">
+            <div class="tl-step done"><i></i><span>Check-in</span></div>
+            <div class="tl-line"></div>
+            <div class="tl-step done"><i></i><span>Work</span></div>
+            <div class="tl-line"></div>
+            <div class="tl-step"><i></i><span>Sign-off</span></div>
+            <div class="tl-line"></div>
+            <div class="tl-step"><i></i><span>Pay</span></div>
+          </div>
+          <button class="ds-btn ds-btn-outline ds-btn-sm">Get directions</button>
+        </div>
+        <div class="req-card">
+          <div class="req-row"><b>Service</b><span>Electrical Wiring</span></div>
+          <div class="req-divider"></div>
+          <div class="req-row"><b>Date</b><span>02.06.2026</span></div>
+          <div class="req-divider"></div>
+          <div class="req-row"><b>Engineer</b><span>Emilia Scott</span></div>
+          <div class="req-divider"></div>
+          <div class="req-row"><b>Total</b><span class="amount">$220.00</span></div>
+        </div>
+      </div>
+      <figure class="shot">
+        <img src="assets/screens/my-jobs-client.png" alt="My Jobs" loading="lazy" />
+        <figcaption class="mono">(10) My Jobs &mdash; card anatomy</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ 13 · WALLET ============ -->
+  <section class="sec" id="wallet">
+    <div class="sec-head">
+      <span class="sec-num mono">(13)</span>
+      <h2 class="sec-title">Wallet&nbsp;&amp;&nbsp;banners</h2>
+      <span class="sec-tag mono">Components</span>
+    </div>
+    <div class="comp-row">
+      <div class="preview preview-stack">
+        <div class="wallet-card">
+          <div class="wallet-label">Your Balance</div>
+          <div class="wallet-amount">$10,587</div>
+          <div class="wallet-actions">
+            <button class="wallet-btn">Withdraw</button>
+            <button class="wallet-btn">Top Up</button>
+          </div>
+        </div>
+        <div class="banner-card">
+          <div class="banner-title">Join the Network</div>
+          <div class="banner-sub">Your skills. Your schedule. Your earnings.</div>
+        </div>
+        <div class="benefits-card">
+          <h4>Top-up Benefits</h4>
+          <ul class="benefits-list">
+            <li>Instant credit to your wallet</li>
+            <li>Bonus cash on select top-ups</li>
+          </ul>
+        </div>
+      </div>
+      <figure class="shot">
+        <img src="assets/screens/wallet-client.png" alt="Wallet" loading="lazy" />
+        <figcaption class="mono">(16) Wallet &mdash; gradient balance card</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ 14 · NAVIGATION ============ -->
+  <section class="sec" id="navigation">
+    <div class="sec-head">
+      <span class="sec-num mono">(14)</span>
+      <h2 class="sec-title">Navigation&nbsp;&amp;&nbsp;headers</h2>
+      <span class="sec-tag mono">Components</span>
+    </div>
+    <div class="comp-row">
+      <div class="preview preview-bottomsheet">
+        <div class="phone">
+          <div class="app-header">
+            <div class="h-left"><span class="avatar avatar-green">E</span><span class="h-brand">Field Techy</span></div>
+            <div class="h-right"><span class="bell">&#128276;<i class="dot"></i></span><span class="hamb">&#8801;</span></div>
+          </div>
+          <div class="phone-body">
+            <p class="muted small">Tap a tab to switch the active state.</p>
+          </div>
+          <div class="bottom-nav" id="bottomNavDemo">
+            <button class="nav-item" data-active="true"><span class="ni-icon home"></span><span>Dashboard</span></button>
+            <button class="nav-item"><span class="ni-icon brief"></span><span>Jobs</span></button>
+            <button class="nav-item"><span class="ni-icon walleti"></span><span>Wallet</span></button>
+            <button class="nav-item"><span class="ni-icon dispute"></span><span>Dispute</span></button>
+          </div>
+        </div>
+      </div>
+      <figure class="shot">
+        <img src="assets/screens/dashboard-client.png" alt="Client Dashboard" loading="lazy" />
+        <figcaption class="mono">(03) Dashboard &mdash; header + bottom nav</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ 15 · CHIPS ============ -->
+  <section class="sec" id="chips">
+    <div class="sec-head">
+      <span class="sec-num mono">(15)</span>
+      <h2 class="sec-title">Chips&nbsp;&amp;&nbsp;status</h2>
+      <span class="sec-tag mono">Components</span>
+    </div>
+    <p class="sec-lead">Tinted background + colored text. Never color-only &mdash; pair with a label or icon.</p>
+    <div class="preview">
+      <span class="chip chip-green">Waiting for Assign</span>
+      <span class="chip chip-blue">In progress</span>
+      <span class="chip chip-amber">Pending</span>
+      <span class="chip chip-red">Rejected</span>
+      <span class="chip chip-gray">Draft</span>
+      <span class="chip chip-green-solid">Full Time</span>
+      <span class="tag">EUC</span>
+    </div>
+    <div class="preview preview-seg">
+      <div class="seg">
+        <button class="seg-item seg-active">Dispatch</button>
+        <button class="seg-item">Full Time</button>
+        <button class="seg-item">Scheduled</button>
+      </div>
+      <span class="muted small">Segmented control &mdash; active <code>#009966</code>, inactive white + border <code>#D0DCF2</code>, radius 27.</span>
+    </div>
+  </section>
+
+  <!-- ============ 16 · FEEDBACK ============ -->
+  <section class="sec" id="feedback">
+    <div class="sec-head">
+      <span class="sec-num mono">(16)</span>
+      <h2 class="sec-title">Dialogs&nbsp;&amp;&nbsp;feedback</h2>
+      <span class="sec-tag mono">Components</span>
+    </div>
+    <div class="comp-row">
+      <div class="preview">
+        <button class="ds-btn ds-btn-primary" id="showModal">Show Log-out dialog</button>
+        <div class="toast-stack">
+          <div class="toast">&check; Job posted successfully!</div>
+        </div>
+      </div>
+      <div class="spec">
+        <p>Scrim <code>rgba(0,0,0,.4&ndash;.6)</code>, centered dialog radius <code>16</code>, title Poppins 400/14 <code>#101828</code>.</p>
+        <p>Destructive actions in <code>#EF4444</code> / reject button <code>#D95741</code>. Success toast for confirmations.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 17 · CHAT ============ -->
+  <section class="sec" id="chat">
+    <div class="sec-head">
+      <span class="sec-num mono">(17)</span>
+      <h2 class="sec-title">Chat</h2>
+      <span class="sec-tag mono">Components</span>
+    </div>
+    <div class="comp-row">
+      <div class="preview">
+        <div class="chat-demo">
+          <div class="bubble bubble-in">Hi Michael, please ensure all 20 laptops are charged.</div>
+          <div class="bubble bubble-out">Sure! I'll start with the conference room units.</div>
+          <div class="bubble bubble-in">Great &mdash; share the sign-off sheet when done.</div>
+          <div class="composer"><input class="ds-input" placeholder="Type your message&hellip;" /><button class="ds-btn ds-btn-info ds-btn-sm">Send</button></div>
+        </div>
+      </div>
+      <figure class="shot">
+        <img src="assets/screens/chat-client-engineer.png" alt="Chat with Engineer" loading="lazy" />
+        <figcaption class="mono">(31) Chat &mdash; Inter for messages</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ 18 · TIMELINE ============ -->
+  <section class="sec" id="timeline">
+    <div class="sec-head">
+      <span class="sec-num mono">(18)</span>
+      <h2 class="sec-title">Job&nbsp;timeline</h2>
+      <span class="sec-tag mono">Components</span>
+    </div>
+    <div class="comp-row">
+      <div class="preview">
+        <div class="vtl">
+          <div class="vtl-step done"><span class="vtl-dot">&check;</span><div><b>Task started</b><p class="muted small">08:21 AM &middot; Engineer arrived</p></div></div>
+          <div class="vtl-step done"><span class="vtl-dot">&check;</span><div><b>Work in progress</b><p class="muted small">Photos &amp; notes added</p></div></div>
+          <div class="vtl-step current"><span class="vtl-dot"></span><div><b>Sign-off submitted</b><p class="muted small">Awaiting client approval</p></div></div>
+          <div class="vtl-step"><span class="vtl-dot"></span><div><b>Payment release</b><p class="muted small">Released after approval</p></div></div>
+        </div>
+      </div>
+      <figure class="shot">
+        <img src="assets/screens/job-engineer-timeline.png" alt="Engineer timeline" loading="lazy" />
+        <figcaption class="mono">(12) Job &mdash; engineer timeline</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ 19 · SCREENS ============ -->
+  <section class="sec" id="screens">
+    <div class="sec-head">
+      <span class="sec-num mono">(19)</span>
+      <h2 class="sec-title">Screens</h2>
+      <span class="sec-tag mono">Inventory &mdash; 31 renders</span>
+    </div>
+    <p class="sec-lead">All frames from the <i>Mobile high fidelity design</i> page, rendered at 2&times;. Grouped by flow.</p>
+    <div id="screens-root" class="screens"></div>
+  </section>
+
+  <!-- ============ 20 · STATUS ============ -->
+  <section class="sec" id="status">
+    <div class="sec-head">
+      <span class="sec-num mono">(20)</span>
+      <h2 class="sec-title">Status&nbsp;system</h2>
+      <span class="sec-tag mono">Patterns</span>
+    </div>
+    <div class="comp-row">
+      <div class="preview preview-flow">
+        <div class="flow">
+          <span class="flow-step done">Job posted</span><i class="flow-arrow">&rarr;</i>
+          <span class="flow-step done">Payment held</span><i class="flow-arrow">&rarr;</i>
+          <span class="flow-step done">Engineer applies</span><i class="flow-arrow">&rarr;</i>
+          <span class="flow-step current">Client approves</span><i class="flow-arrow">&rarr;</i>
+          <span class="flow-step">Engineer accepts</span><i class="flow-arrow">&rarr;</i>
+          <span class="flow-step">Check-in</span><i class="flow-arrow">&rarr;</i>
+          <span class="flow-step">Work</span><i class="flow-arrow">&rarr;</i>
+          <span class="flow-step">Sign-off</span><i class="flow-arrow">&rarr;</i>
+          <span class="flow-step">Approved</span><i class="flow-arrow">&rarr;</i>
+          <span class="flow-step">Released</span><i class="flow-arrow">&rarr;</i>
+          <span class="flow-step">Rating</span>
+        </div>
+      </div>
+      <div class="spec">
+        <p><b>Payment states:</b> Held &rarr; Pending Release &rarr; Released. On hold during dispute.</p>
+        <p>Payment is required before a job is published. Engineers cannot be paid before client approval.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 21 · TOKENS ============ -->
+  <section class="sec" id="tokens">
+    <div class="sec-head">
+      <span class="sec-num mono">(21)</span>
+      <h2 class="sec-title">Design&nbsp;tokens</h2>
+      <span class="sec-tag mono">Handoff</span>
+    </div>
+    <p class="sec-lead">Full token file &mdash; <code>design-tokens.json</code> (W3C/DTCG). Import into Tokens Studio, Tailwind, or your theme.</p>
+    <div class="token-block">
+      <div class="token-block-head mono">
+        <span>design-tokens.json</span>
+        <button class="btn-ghost-link" id="copyTokens">Copy JSON &#8599;</button>
+      </div>
+      <pre id="tokens-root" class="code-block"></pre>
+    </div>
+  </section>
+
+  <!-- ============ 22 · CSS ============ -->
+  <section class="sec" id="css">
+    <div class="sec-head">
+      <span class="sec-num mono">(22)</span>
+      <h2 class="sec-title">CSS&nbsp;variables</h2>
+      <span class="sec-tag mono">Handoff</span>
+    </div>
+    <p class="sec-lead">Paste into your global stylesheet. Uses the Field Techy palette &amp; Poppins.</p>
+    <div class="token-block">
+      <div class="token-block-head mono">
+        <span>tokens.css</span>
+        <button class="btn-ghost-link" id="copyCss">Copy CSS &#8599;</button>
+      </div>
+      <pre id="css-root" class="code-block"></pre>
+    </div>
+    <h3 class="sub-title"><span class="mono">22.1</span> Implementation notes</h3>
+    <ul class="note-list">
+      <li>Load <b>Poppins</b> (400/500/600/700/900), Inter (400&ndash;700), Rubik (600), Plus Jakarta Sans (800). Replace all <b>Segoe UI</b> text with Poppins.</li>
+      <li>One <code>&lt;Button&gt;</code> primitive: variants <code>primary | dark | outline | approve | reject | social</code>, sizes <code>lg (47) | md (48)</code>, <code>fullWidth</code>, trailing icon 20&nbsp;pt.</li>
+      <li>Bottom nav: 4 slots, <code>active</code> prop &rarr; <code>#009966</code>.</li>
+      <li>Base Card: white, radius 16, border <code>#D7DAE6</code>, pad 16&ndash;24.</li>
+      <li>Wallet card: gradient fill + white Rubik amount.</li>
+      <li>Dark mode is <b>not</b> designed in v2.0 &mdash; keep light theme.</li>
+      <li>Text may expand ~30% for localization &mdash; avoid fixed-height text boxes.</li>
+    </ul>
+  </section>
+
+  <!-- ============ 23 · ANIMATION ============ -->
+  <section class="sec" id="animation">
+    <div class="sec-head">
+      <span class="sec-num mono">(23)</span>
+      <h2 class="sec-title">Login&nbsp;animation</h2>
+      <span class="sec-tag mono">Handoff</span>
+    </div>
+    <p class="sec-lead">The 7-state splash loop from <i>Login animation v1.0 mobile</i> as a single production-ready JSON. Frames are embedded inline &mdash; all on a fixed <code>400&times;400</code> stage &mdash; so a developer can drop this file in and render the loop without touching assets.</p>
+    <div class="token-block">
+      <div class="token-block-head mono">
+        <span>animation.json</span>
+        <span class="tb-actions">
+          <a class="btn-ghost-link" href="assets/animation/animation.json" download>Download &#8595;</a>
+          <button class="btn-ghost-link" id="copyAnimation">Copy JSON &#8599;</button>
+        </span>
+      </div>
+      <pre id="animation-root" class="code-block"></pre>
+    </div>
+    <h3 class="sub-title"><span class="mono">23.1</span> How to render it</h3>
+    <ul class="note-list">
+      <li>Parse the JSON &mdash; <code>stage</code> is the fixed <code>400&times;400</code> canvas; <code>states[].svg</code> is the frame markup ready to inject.</li>
+      <li>Crossfade states every <code>2000&nbsp;ms</code> over <code>300&nbsp;ms ease</code> (see <code>timing</code>), apply the <code>float</code> to the active state, and fill the <code>background</code> gradient.</li>
+      <li>Respect <code>reducedMotion</code> &mdash; keep cross-fades, drop the float.</li>
+      <li>Source: Figma component <code>Login animation v1.0 mobile</code> &middot; frames 1450:78964&ndash;1450:79353.</li>
+    </ul>
+  </section>
+
+  <!-- ============ 24 · QA ============ -->
+  <section class="sec" id="qa">
+    <div class="sec-head">
+      <span class="sec-num mono">(24)</span>
+      <h2 class="sec-title">QA&nbsp;checklist</h2>
+      <span class="sec-tag mono">Handoff</span>
+    </div>
+    <ul class="qa-list" id="qa-root"></ul>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer-marquee" aria-hidden="true">
+      <span>Field&nbsp;Techy&nbsp;&middot;&nbsp;Field&nbsp;Techy&nbsp;&middot;&nbsp;Field&nbsp;Techy&nbsp;&middot;&nbsp;Field&nbsp;Techy&nbsp;&middot;&nbsp;Field&nbsp;Techy&nbsp;&middot;&nbsp;Field&nbsp;Techy&nbsp;&middot;&nbsp;</span>
+    </div>
+    <div class="footer-grid">
+      <div class="fg-col">
+        <p class="mono fg-label">Site</p>
+        <a href="#overview">Overview</a>
+        <a href="#colors">Foundations</a>
+        <a href="#buttons">Components</a>
+        <a href="#screens">Screens</a>
+      </div>
+      <div class="fg-col">
+        <p class="mono fg-label">Handoff files</p>
+        <a href="../style-guide.md" download>style-guide.md</a>
+        <a href="../design-tokens.json" download>design-tokens.json</a>
+        <a href="assets/animation/animation.json" download>animation.json</a>
+        <a href="https://www.figma.com/design/YT6JQ3g2DEVDF5Es5a0j3N/Field-Techy---Design-v2.0?node-id=1279-34079" target="_blank" rel="noopener">Figma file</a>
+      </div>
+      <div class="fg-col">
+        <p class="mono fg-label">Contact</p>
+        <a href="https://www.figma.com/design/YT6JQ3g2DEVDF5Es5a0j3N" target="_blank" rel="noopener">Design team</a>
+        <a href="#tokens">Token export</a>
+      </div>
+    </div>
+    <div class="footer-base mono">
+      <span>&copy;2026 Field Techy</span>
+      <span>Design System v2.0</span>
+      <span>390&nbsp;pt canvas</span>
+    </div>
+  </footer>
+
+</main>
+
+<!-- Modal -->
+<div class="modal" id="modalDemo" hidden>
+  <div class="modal-card">
+    <div class="modal-icon">&#9888;&#65039;</div>
+    <h4>Are you sure you want to Log out?</h4>
+    <p class="muted small">You'll need to sign in again to manage jobs and your wallet.</p>
+    <div class="modal-actions">
+      <button class="ds-btn ds-btn-outline ds-btn-sm" id="closeModal">Cancel</button>
+      <button class="ds-btn ds-btn-reject ds-btn-sm">Logout</button>
+    </div>
+  </div>
+</div>
+<div class="scrim" id="scrim" hidden></div>
+<div class="toast-copy" id="toastCopy" hidden>Copied!</div>
+
+<script src="js/animation-data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

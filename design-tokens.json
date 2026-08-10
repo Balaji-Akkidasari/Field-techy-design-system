@@ -1,0 +1,262 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "name": "Field Techy Design Tokens",
+  "version": "2.0",
+  "source": "Figma file: Field Techy - Design v2.0 (YT6JQ3g2DEVDF5Es5a0j3N)",
+  "color": {
+    "brand": {
+      "type": "color",
+      "description": "Primary brand green palette (swatches 1-8 from Figma 'Colors system').",
+      "main": { "value": "#009966", "description": "Brand primary. Primary buttons, links, active states, icons." },
+      "hover": { "value": "#00875A", "description": "Primary hover state." },
+      "pressed": { "value": "#007750", "description": "Primary pressed/active state. Also used for filled wallet action buttons." },
+      "deep": { "value": "#016946", "description": "Darkest brand green. Text/accents on light backgrounds." },
+      "light": { "value": "#57C8A1", "description": "Light brand green." },
+      "lighter": { "value": "#8CE7C8", "description": "Lighter brand green." },
+      "lightest": { "value": "#BEF6E3", "description": "Very light brand green." },
+      "tint": { "value": "#CDF0E4", "description": "Brand green tint. Soft chip/tag backgrounds." },
+      "cta": { "value": "#00C896", "description": "Brighter green used for secondary CTA text ('Create a Project', 'Post a Job')." }
+    },
+    "info": {
+      "type": "color",
+      "description": "Blue / information palette.",
+      "100": { "value": "#D9F0FF" },
+      "200": { "value": "#B6E1FF" },
+      "300": { "value": "#86CDFF" },
+      "400": { "value": "#3D94FF" },
+      "500": { "value": "#1478F3", "description": "Info primary." },
+      "600": { "value": "#046FF2" },
+      "700": { "value": "#0063DC" },
+      "800": { "value": "#0257BE" },
+      "chip-text": { "value": "#2563EB", "description": "Info chip text used in job cards." },
+      "job-type-text": { "value": "#004A99", "description": "'Full Time' job type text." },
+      "action": { "value": "#4794E7", "description": "Check-in / location action buttons." }
+    },
+    "error": {
+      "type": "color",
+      "description": "Red / error palette.",
+      "100": { "value": "#FFE5E0" },
+      "200": { "value": "#EC8686" },
+      "300": { "value": "#ED7676" },
+      "400": { "value": "#ED6464" },
+      "500": { "value": "#EF4444", "description": "Error primary. Destructive text/icons (e.g. Logout)." },
+      "600": { "value": "#EA3A3A" },
+      "700": { "value": "#E42D2D" },
+      "800": { "value": "#DA2316" },
+      "reject": { "value": "#D95741", "description": "Reject button background." },
+      "required": { "value": "#D50A0A", "description": "Required-field asterisk." }
+    },
+    "success": {
+      "type": "color",
+      "description": "Green / success palette.",
+      "100": { "value": "#B6E0AA" },
+      "200": { "value": "#95DB80" },
+      "300": { "value": "#81D866" },
+      "400": { "value": "#54D12E" },
+      "500": { "value": "#30CC00" },
+      "600": { "value": "#3AAA17" },
+      "700": { "value": "#369E17" },
+      "800": { "value": "#328D17" },
+      "approve": { "value": "#2E9A1D", "description": "Approve button background." }
+    },
+    "warning": {
+      "type": "color",
+      "description": "Amber / brown (status 4) palette.",
+      "100": { "value": "#FFF5D3" },
+      "200": { "value": "#FFEEB4" },
+      "300": { "value": "#FBE393" },
+      "400": { "value": "#FFDA5E" },
+      "500": { "value": "#B99100" },
+      "600": { "value": "#AA8708" },
+      "700": { "value": "#A88400" },
+      "800": { "value": "#957A18" }
+    },
+    "neutral": {
+      "type": "color",
+      "description": "Dark grays ('Black' palette).",
+      "100": { "value": "#B2B2B2" },
+      "200": { "value": "#A0A0A0" },
+      "300": { "value": "#898989" },
+      "400": { "value": "#827F7F" },
+      "500": { "value": "#777777" },
+      "600": { "value": "#444444" },
+      "700": { "value": "#373737" },
+      "800": { "value": "#26272C" }
+    },
+    "neutral-light": {
+      "type": "color",
+      "description": "Light grays ('Neutral' palette).",
+      "100": { "value": "#DCDCDC" },
+      "200": { "value": "#D0D0D0" },
+      "300": { "value": "#D1D1D1" },
+      "400": { "value": "#DBDBDB" },
+      "500": { "value": "#DDDDDD" },
+      "600": { "value": "#AFAFAF" },
+      "700": { "value": "#8E8E8E" },
+      "800": { "value": "#8B8B8B" }
+    },
+    "foundation": {
+      "type": "color",
+      "description": "Base near-black / near-white.",
+      "ink": { "value": "#292D32", "description": "Near-black ink. Icon color (vuesax default), dark text." },
+      "off-white": { "value": "#FDFDFD", "description": "Off-white used for text on primary buttons." }
+    },
+    "semantic": {
+      "type": "color",
+      "description": "Semantic roles derived from usage.",
+      "background": { "value": "#FFFFFF" },
+      "background-alt": { "value": "#F9FAFB", "description": "Input field background." },
+      "background-muted": { "value": "#F2F2F2", "description": "Social/ghost button background." },
+      "surface": { "value": "#FFFFFF" },
+      "surface-subtle": { "value": "#FDFDFD" },
+      "text-primary": { "value": "#101828", "description": "Primary text / headings." },
+      "text-heading": { "value": "#1C1F29", "description": "Secondary headings." },
+      "text-body": { "value": "#26272C" },
+      "text-muted": { "value": "#6B7280", "description": "Secondary/muted text." },
+      "text-muted-2": { "value": "#717182", "description": "Muted text on light screens (auth screens)." },
+      "text-placeholder": { "value": "#666666" },
+      "text-on-primary": { "value": "#FFFFFF", "description": "Text/icon color on filled primary buttons." },
+      "text-on-primary-alt": { "value": "#FDFDFD" },
+      "text-inverse": { "value": "#FDFDFD", "description": "Text on gradient/dark cards." },
+      "text-link": { "value": "#009966" },
+      "text-disabled": { "value": "#9CA3AF" },
+      "text-note": { "value": "#838383" },
+      "border-default": { "value": "#D7DAE6", "description": "Card border." },
+      "border-card": { "value": "#EAECF0", "description": "Card/section border (forms)." },
+      "border-input": { "value": "#A3A3A3", "description": "Input border." },
+      "divider": { "value": "#E0E0E0" },
+      "header-border": { "value": "#E4E5E9" },
+      "chip-border": { "value": "#D0DCF2", "description": "Segmented control / chip border." },
+      "nav-inactive": { "value": "#A29EB6", "description": "Inactive bottom-nav label/icon." },
+      "scrim": { "value": "#000000", "description": "Modal overlay, 40-60% opacity." },
+      "highlight": { "value": "#00C896" }
+    }
+  },
+  "gradient": {
+    "type": "gradient",
+    "hero-auth": {
+      "value": ["#E6FFE2", "#00E19D"],
+      "description": "Splash, login, role-selection and onboarding backgrounds. 45°."
+    },
+    "wallet": {
+      "value": ["#009362", "#40D2A1"],
+      "description": "Wallet balance card, AI assistant card."
+    },
+    "logo": {
+      "value": ["#00D18C", "#009966"],
+      "description": "Field Techy logo mark and app icon."
+    },
+    "benefits": {
+      "value": ["#ECFDF5", "#D0FAE5"],
+      "description": "Soft informational card (Top-up Benefits), stroke #A4F4CF."
+    },
+    "chatbot": {
+      "value": ["#FFFFFF", "#EDFFEB"],
+      "description": "Chatbot screen background."
+    }
+  },
+  "font": {
+    "type": "fontFamily",
+    "primary": { "value": "Poppins", "description": "Primary UI font. Weights used: 400, 500, 600, 700, 900." },
+    "secondary": { "value": "Inter", "description": "Chat, calendar, tables and compact labels. Weights: 400, 500, 600, 700." },
+    "display": { "value": "Plus Jakarta Sans", "description": "Occasional bold display labels (800)." },
+    "numeric": { "value": "Rubik", "description": "Large money figures on gradient wallet cards (SemiBold)." },
+    "fallback": { "value": "Segoe UI", "description": "Current Figma fallback. Replace usages with Poppins during build." }
+  },
+  "fontSize": {
+    "type": "fontSizes",
+    "micro": { "value": "10px" },
+    "xs": { "value": "11px" },
+    "sm": { "value": "12px" },
+    "md": { "value": "13px" },
+    "base": { "value": "14px" },
+    "lg": { "value": "15px" },
+    "xl": { "value": "16px" },
+    "2xl": { "value": "18px" },
+    "3xl": { "value": "20px" },
+    "4xl": { "value": "22px" },
+    "5xl": { "value": "24px" },
+    "6xl": { "value": "28px" },
+    "8xl": { "value": "32px" }
+  },
+  "lineHeight": {
+    "type": "lineHeights",
+    "tight": { "value": "16px" },
+    "snug": { "value": "20px" },
+    "normal": { "value": "1.5", "description": "Default ratio used across most Poppins text (size × 1.5)." },
+    "loose": { "value": "42px" }
+  },
+  "typeRole": {
+    "type": "typography",
+    "display": { "value": { "fontFamily": "Poppins", "fontWeight": "700", "fontSize": "28px", "lineHeight": "42px" }, "description": "Splash/hero titles." },
+    "display-alt": { "value": { "fontFamily": "Poppins", "fontWeight": "700", "fontSize": "28px", "lineHeight": "40px" } },
+    "title-large": { "value": { "fontFamily": "Poppins", "fontWeight": "600", "fontSize": "22px", "lineHeight": "33px" }, "description": "Section heroes ('Choose Your Account Type')." },
+    "title": { "value": { "fontFamily": "Poppins", "fontWeight": "600", "fontSize": "20px", "lineHeight": "30px" }, "description": "Screen titles." },
+    "subtitle": { "value": { "fontFamily": "Poppins", "fontWeight": "600", "fontSize": "18px", "lineHeight": "27px" }, "description": "Card/section headers." },
+    "section-title": { "value": { "fontFamily": "Poppins", "fontWeight": "600", "fontSize": "16px", "lineHeight": "24px" }, "description": "Screen headers, card titles, button labels." },
+    "button": { "value": { "fontFamily": "Poppins", "fontWeight": "600", "fontSize": "15px", "lineHeight": "22.5px" }, "description": "Primary CTA label." },
+    "body": { "value": { "fontFamily": "Poppins", "fontWeight": "400", "fontSize": "14px", "lineHeight": "21px" }, "description": "Default body text." },
+    "body-strong": { "value": { "fontFamily": "Poppins", "fontWeight": "600", "fontSize": "14px", "lineHeight": "21px" }, "description": "Emphasized body / list values." },
+    "body-medium": { "value": { "fontFamily": "Poppins", "fontWeight": "500", "fontSize": "14px", "lineHeight": "21px" } },
+    "input": { "value": { "fontFamily": "Poppins", "fontWeight": "400", "fontSize": "14px", "lineHeight": "20px" }, "description": "Input value / placeholder." },
+    "label": { "value": { "fontFamily": "Poppins", "fontWeight": "400", "fontSize": "11px", "lineHeight": "16.5px" }, "description": "Field labels, descriptions." },
+    "label-strong": { "value": { "fontFamily": "Poppins", "fontWeight": "600", "fontSize": "11px", "lineHeight": "16.5px" } },
+    "meta": { "value": { "fontFamily": "Poppins", "fontWeight": "400", "fontSize": "12px", "lineHeight": "18px" }, "description": "Meta text, tags." },
+    "meta-medium": { "value": { "fontFamily": "Poppins", "fontWeight": "500", "fontSize": "12px", "lineHeight": "18px" } },
+    "meta-strong": { "value": { "fontFamily": "Poppins", "fontWeight": "600", "fontSize": "12px", "lineHeight": "18px" }, "description": "Chips, tags, card titles." },
+    "micro": { "value": { "fontFamily": "Poppins", "fontWeight": "400", "fontSize": "10px", "lineHeight": "15px" } },
+    "amount": { "value": { "fontFamily": "Poppins", "fontWeight": "700", "fontSize": "18px", "lineHeight": "27px" }, "description": "Wallet/amount figures on light background." },
+    "amount-large": { "value": { "fontFamily": "Rubik", "fontWeight": "600", "fontSize": "30px", "lineHeight": "30px" }, "description": "Large wallet balance on gradient card." },
+    "statusbar": { "value": { "fontFamily": "Poppins", "fontWeight": "900", "fontSize": "14px", "lineHeight": "16px" }, "description": "Status bar clock." }
+  },
+  "spacing": {
+    "type": "spacing",
+    "0": { "value": "0px" },
+    "2": { "value": "2px" },
+    "4": { "value": "4px" },
+    "6": { "value": "6px" },
+    "8": { "value": "8px" },
+    "10": { "value": "10px" },
+    "12": { "value": "12px" },
+    "16": { "value": "16px" },
+    "20": { "value": "20px" },
+    "24": { "value": "24px" },
+    "28": { "value": "28px" },
+    "32": { "value": "32px" },
+    "40": { "value": "40px" },
+    "48": { "value": "48px" },
+    "64": { "value": "64px" }
+  },
+  "radius": {
+    "type": "borderRadius",
+    "sm": { "value": "6px", "description": "Approve/Reject buttons." },
+    "md": { "value": "8px", "description": "Inputs, standard buttons, direction buttons, card CTAs." },
+    "lg": { "value": "13px", "description": "Job cards." },
+    "xl": { "value": "14px", "description": "Tracking card, benefits card." },
+    "2xl": { "value": "16px", "description": "Cards, bottom nav, section cards." },
+    "3xl": { "value": "18px", "description": "Request card." },
+    "pill-chips": { "value": "27px", "description": "Segmented control / chips." },
+    "banner": { "value": "32px" },
+    "full": { "value": "50px", "description": "Primary CTA pills, avatars (circle)." }
+  },
+  "shadow": {
+    "type": "boxShadow",
+    "sm": { "value": { "x": "0px", "y": "1px", "blur": "25px", "spread": "0px", "color": "rgba(0,0,0,0.05)" }, "description": "Quick action card." },
+    "md": { "value": { "x": "0px", "y": "4px", "blur": "16px", "spread": "0px", "color": "rgba(0,0,0,0.08)" }, "description": "Bottom navigation." },
+    "lg": { "value": { "x": "0px", "y": "8px", "blur": "16px", "spread": "0px", "color": "rgba(0,111,255,0.08)" }, "description": "Tracking card elevation." }
+  },
+  "dimension": {
+    "type": "dimension",
+    "screen-mobile": { "value": "390px", "description": "Design canvas width for all mobile screens." },
+    "statusbar-height": { "value": "44px" },
+    "bottomnav-height": { "value": "70px" },
+    "input-height": { "value": "45px" },
+    "button-height-primary": { "value": "47px", "description": "Full-width primary CTA." },
+    "button-height-medium": { "value": "48px" },
+    "icon-size-sm": { "value": "16px" },
+    "icon-size": { "value": "20px" },
+    "icon-size-lg": { "value": "24px" },
+    "avatar-size": { "value": "36px" },
+    "touch-target-min": { "value": "44px" }
+  }
+}
